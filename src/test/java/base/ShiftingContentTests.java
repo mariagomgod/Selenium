@@ -17,8 +17,7 @@ public class ShiftingContentTests extends BaseTests {
         Thread.sleep(2000);
         ExampleMenuElementPage exampleMenuElement = shiftingContent.clickExampleMenuElement();
         Thread.sleep(2000);
-        List<WebElement> menuElements = exampleMenuElement.findMenuElements();
-        assertEquals(menuElements.size(), 5);
+        assertEquals(exampleMenuElement.findMenuElements().size(), 5);
     }
 }
 
