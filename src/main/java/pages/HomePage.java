@@ -20,6 +20,8 @@ public class HomePage {
 
     private final By challengingDom = By.cssSelector("#content ul li a[href=\"/challenging_dom\"]");
 
+    private final By contextMenu = By.cssSelector("#content ul li a[href=\"/context_menu\"]");
+
 
     // Acciones sobre Homepage
     public ShiftingContentPage clickShiftingContent() throws InterruptedException {
@@ -44,5 +46,10 @@ public class HomePage {
         driver.findElement(challengingDom).click();
         Thread.sleep(2000);
         return new ChallengingDomPage(driver);
+    }
+
+    public ContextMenuPage clickContextMenu() {
+        driver.findElement(contextMenu).click();
+        return new ContextMenuPage(driver);
     }
 }
