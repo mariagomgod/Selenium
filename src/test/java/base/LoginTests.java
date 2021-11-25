@@ -13,10 +13,10 @@ public class LoginTests extends BaseTests {
        LoginPage loginPage = homePage.clickFormAuthentication();
        loginPage.setUsernameField("tomsmith");
        loginPage.setPasswordField("SuperSecretPassword!");
-       Thread.sleep(2000);
+       Thread.sleep(1000);
 
        SecureAreaPage secureAreaPage = loginPage.clickLoginButton();
-       Thread.sleep(2000);
+       Thread.sleep(1000);
        assertTrue(secureAreaPage.getAlertText().contains("You logged into a secure area!"));
     }
 }
